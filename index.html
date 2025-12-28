@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fake Exit</title>
+<style>
+  body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    color:#fff;
+    overflow:hidden;
+    font-family:sans-serif;
+  }
+  button{
+    position:absolute;
+    padding:15px 30px;
+    font-size:20px;
+    cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+<button id="exitBtn">EXIT</button>
+
+<script>
+  const btn = document.getElementById("exitBtn")
+
+  // Tugma qochishi
+  btn.addEventListener("mouseover", () => {
+    btn.style.left = Math.random() * (window.innerWidth - 120) + "px"
+    btn.style.top  = Math.random() * (window.innerHeight - 60) + "px"
+  })
+
+  // 1 minutdan keyin avtomatik yutding alert
+  setTimeout(() => {
+    alert("😎 ohurgacha keldiz lekin sovĝa yoq 😂")
+  }, 60000) // 60000 ms = 1 minut
+</script>
+
+</body>
+</html>
